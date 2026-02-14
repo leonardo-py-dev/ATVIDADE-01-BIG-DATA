@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Intelligence | Estratégia Futurista</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body>
+
+    <!-- Ambient Glows -->
+    <!-- Ambient Glows -->
+    <div class="mouse-spotlight"></div>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- Sidebar Utilities -->
+    <aside class="sidebar-utils">
+        <a href="#hero" class="sidebar-btn active" data-tooltip="Início">⌂</a>
+        <a href="#concept" class="sidebar-btn" data-tooltip="Conceito">★</a>
+        <a href="#impact" class="sidebar-btn" data-tooltip="Impacto">⚡</a>
+        <a href="#ecosystem" class="sidebar-btn" data-tooltip="Ecossistema">∞</a>
+        
+        <div class="divider" style="height: 1px; background: rgba(255,255,255,0.1); margin: 5px 0;"></div>
+        
+        <div class="sidebar-btn" id="summary-btn" data-tooltip="Resumo Completo">📝</div>
+        <div class="sidebar-btn" id="share-btn" data-tooltip="Copiar Link">🔗</div>
+        <div class="sidebar-btn" id="focus-toggle" data-tooltip="Modo Foco">👁</div>
+    </aside>
+
+    <!-- Summary Modal -->
+    <div id="summary-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button id="close-modal" class="close-btn">&times;</button>
+            <h2>Resumo Executivo: Business Intelligence</h2>
+            
+            <div class="summary-body">
+                <h3>1. O Que é BI?</h3>
+                <p>Business Intelligence (BI) é o processo de transformar dados brutos em inteligência estratégica. É o sistema que permite a transição de uma cultura de "achismo" para uma cultura Data-Driven.</p>
+                
+                <h3>2. O Ciclo de Vida dos Dados</h3>
+                <ul>
+                    <li><strong>Coleta:</strong> Mineração de todas as fontes (IoT, ERPs) buscando Volume, Velocidade e Variedade.</li>
+                    <li><strong>Organização:</strong> ETL (Extração, Transformação, Carga). Governança para criar uma "Single Source of Truth".</li>
+                    <li><strong>Análise:</strong> Uso de KPIs para investigar correlações e causas raízes ("Por que aconteceu?").</li>
+                    <li><strong>Visualização:</strong> Dashboards que reduzem a carga cognitiva e contam uma história (Storytelling).</li>
+                    <li><strong>Decisão:</strong> Ação estratégica e proativa baseada em evidências, não em intuição.</li>
+                </ul>
+
+                <h3>3. Impacto Estratégico</h3>
+                <p>O BI atua na mitigação de riscos (Finanças), antecipação de crises (Saúde) e otimização de oferta/demanda (Varejo).</p>
+
+                <h3>4. O Ecossistema de Dados (Relações)</h3>
+                <ul>
+                    <li><strong>BI e Big Data:</strong> O Big Data é o "Oceano" (tecnologia para volume massivo). O BI é a "Estação de Tratamento" que torna esse dado consumível para gestores.</li>
+                    <li><strong>BI e Data Science:</strong> Parceiros temporais. O BI diagnostica o passado/presente. O Data Science (IA) usa esses dados para prognosticar o futuro.</li>
+                    <li><strong>Warehouse vs Lake:</strong> O Lake aceita tudo (Mina Bruta). O Warehouse armazena apenas dados tratados e organizados (Cofre), otimizados para alimentar o BI.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <main class="container">
+        
+        <!-- Header Section -->
+        <header id="hero" class="hero-section">
+            <h1 class="animate-enter">BUSINESS INTELLIGENCE</h1>
+            <p class="subtitle animate-enter delay-100">Transformando Dados em Superpoderes</p>
+            <div class="hero-decoration animate-enter delay-200"></div>
+        </header>
+
+        <!-- Section 1: Definition & Cycle -->
+        <section id="concept" class="section-block reveal">
+            <h2>Definição Conceitual</h2>
+            <div class="glass-card">
+                <p class="definition-text">
+                    O Business Intelligence atua como um <span class="highlight">Sistema de Diagnóstico Corporativo</span>. Similar à medicina, onde exames orientam o tratamento, o BI processa <span class="highlight-success">dados brutos</span> para fundamentar decisões estratégicas.
+                </p>
+                
+                <!-- Cycle Visualization -->
+                <div class="process-cycle">
+                    <div class="step" data-step="1">
+                        <div class="step-icon">1</div>
+                        <span>Coleta</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="2">
+                        <div class="step-icon">2</div>
+                        <span>Organização</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="3">
+                        <div class="step-icon">3</div>
+                        <span>Análise</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="4">
+                        <div class="step-icon">4</div>
+                        <span>Visualização</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="5">
+                        <div class="step-icon end">5</div>
+                        <span>Decisão</span>
+                    </div>
+                </div>
+
+                <!-- Explanation Container -->
+                <div id="cycle-info" class="cycle-info">
+                    <p id="cycle-text">Clique nos números acima para ver os detalhes de cada etapa.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Importance & ROI -->
+        <section id="impact" class="section-block">
+            <h2 class="reveal">Impacto Estratégico</h2>
+            <div class="grid-3">
+                <div class="glass-card card-hover reveal">
+                    <h3 class="card-title">Finanças</h3>
+                    <p>Mitigação de riscos em investimentos. O BI substitui a intuição por análises preditivas, indicando com precisão onde alocar recursos para maximizar o retorno.</p>
+                </div>
+                <div class="glass-card card-hover reveal">
+                    <h3 class="card-title">Saúde Pública</h3>
+                    <p>Gestão antecipada de crises. Hospitais utilizam BI para monitorar tendências epidemiológicas e preparar infraestrutura antes de surtos ocorrerem.</p>
+                </div>
+                <div class="glass-card card-hover reveal">
+                    <h3 class="card-title">Varejo & Logística</h3>
+                    <p>Otimização de estoque baseada em demanda real. Análises correlacionam fatores externos (como clima) com o comportamento de consumo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Ecosystem (Interactive Comparisons) -->
+        <section id="ecosystem" class="section-block">
+            <h2 class="reveal">Ecossistema de Dados</h2>
+            
+            <div class="glass-card">
+                <!-- Tab Buttons -->
+                <div class="eco-tabs">
+                    <button class="eco-tab active" data-eco="1">BI <span class="vs-small">vs</span> Big Data</button>
+                    <button class="eco-tab" data-eco="2">BI <span class="vs-small">vs</span> Data Science</button>
+                    <button class="eco-tab" data-eco="3">Warehouse <span class="vs-small">vs</span> Lake</button>
+                </div>
+
+                <!-- Dynamic Content Display -->
+                <div id="eco-display" class="eco-content visible">
+                    <div class="comp-header">
+                        <h3 class="comp-title">BI <span class="vs">vs</span> Big Data</h3>
+                    </div>
+                    <div class="comp-body">
+                        <div class="side left">
+                            <h4>BI (Análise Focada)</h4>
+                            <p>Trabalha com dados estruturados para responder perguntas específicas do negócio.</p>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="side right">
+                            <h4>Big Data (Volume Massivo)</h4>
+                            <p>Refere-se ao processamento de volumes imensos e variados de informações não estruturadas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <footer class="reveal">
+            <p>&copy; Atividade 01-Big Data: Feito por Leonardo, Davi Cho, Luis Felipe, Raíssa e Lucas Gomes</p>
+        </footer>
+
+    </main>
+
+    <script>
+        // --- Sidebar & Focus Mode Logic ---
+        const sections = document.querySelectorAll('header, section');
+        const navLinks = document.querySelectorAll('.sidebar-utils a');
+
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const navObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        // Get ID, remove # if present (though href usually has #)
+                        const id = link.getAttribute('href').substring(1);
+                        if (entry.target.id === id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            if(section.id) navObserver.observe(section);
+        });
+
+        // Focus Mode Toggle
+        const focusBtn = document.getElementById('focus-toggle');
+        if (focusBtn) {
+            focusBtn.addEventListener('click', () => {
+                document.body.classList.toggle('focus-mode');
+                focusBtn.classList.toggle('active');
+            });
+        }
+
+        // Summary Modal Logic
+        const summaryBtn = document.getElementById('summary-btn');
+        const modal = document.getElementById('summary-modal');
+        const closeBtn = document.getElementById('close-modal');
+
+        if (summaryBtn && modal && closeBtn) {
+            summaryBtn.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+
+            // Close on click outside
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        }
+
+        // Share/Copy Link Functionality
+        const shareBtn = document.getElementById('share-btn');
+        if (shareBtn) {
+            shareBtn.addEventListener('click', () => {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const btn = document.getElementById('share-btn');
+                    const originalText = btn.getAttribute('data-tooltip');
+                    btn.setAttribute('data-tooltip', 'Link Copiado!');
+                    btn.classList.add('active');
+                    
+                    setTimeout(() => {
+                        btn.setAttribute('data-tooltip', originalText);
+                        btn.classList.remove('active');
+                    }, 2000);
+                });
+            });
+        }
+
+        // --- Cycle Interaction Data ---
+        const cycleData = {
+            1: "<strong>Etapa 1: Coleta (A Mineração)</strong><br>O processo começa fora da empresa. Conectamos 'sondas' em diversas fontes: sensores IoT, redes sociais, sistemas financeiros (ERPs) e planilhas antigas. O objetivo é capturar o maior volume possível de dados brutos (Volume, Velocidade e Variedade), garantindo que nada relevante seja deixado para trás. Sem essa matéria-prima, não há inteligência.",
+            2: "<strong>Etapa 2: Organização (A Refinaria)</strong><br>Dados brutos são como petróleo cru: sujos e difíceis de usar. Nesta etapa, aplicamos o ETL (Extração, Transformação e Carga). Corrigimos erros de digitação, padronizamos formatos (ex: 'R$ 10' vs '10 BRL') e removemos duplicatas. É a governança de dados garantindo que a informação seja confiável e única (Single Source of Truth).",
+            3: "<strong>Etapa 3: Análise (O Detetive)</strong><br>Com os dados limpos, aplicamos métricas e KPIs (Indicadores Chave de Performance). O analista investiga o 'passado' para entender o contexto. Cruzamos variáveis aparentemente desconexas — como temperatura e vendas — para descobrir correlações ocultas. O foco é responder: 'O que aconteceu e, principalmente, por que aconteceu?'",
+            4: "<strong>Etapa 4: Visualização (O Painel de Avião)</strong><br>A complexidade matemática é traduzida para a linguagem humana. Utilizamos Data Storytelling para criar Dashboards intuitivos. O objetivo é reduzir a carga cognitiva: um gestor deve olhar para um gráfico e entender a saúde da empresa em 5 segundos, identificando anomalias (vermelho) ou sucessos (verde) instantaneamente.",
+            5: "<strong>Etapa 5: Decisão (O Xadrez Estratégico)</strong><br>O clímax do ciclo. Armado com evidências irrefutáveis, o gestor elimina o 'achismo'. Se o BI mostra que um produto dá prejuízo em dias de chuva, a decisão pode ser parar de anunciá-lo nessas condições. O BI transforma a empresa de reativa (apagar incêndios) para proativa (construir o futuro)."
+        };
+
+        // Click Handler for Cycle
+        document.querySelectorAll('.step').forEach(step => {
+            step.addEventListener('click', () => {
+                // Remove active class from all
+                document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+                
+                // Add active to clicked
+                step.classList.add('active');
+                
+                // Update Text
+                const id = step.getAttribute('data-step');
+                const infoBox = document.getElementById('cycle-info');
+                const infoText = document.getElementById('cycle-text');
+                
+                if (infoBox && infoText) {
+                    infoBox.classList.remove('visible');
+                    
+                    setTimeout(() => {
+                        infoText.innerHTML = cycleData[id];
+                        infoBox.classList.add('visible');
+                    }, 300); 
+                }
+            });
+        });
+
+        // --- Ecosystem Interaction Data ---
+        const ecoData = {
+            1: `
+                <div class="comp-header">
+                    <h3 class="comp-title">BI <span class="vs">e</span> Big Data</h3>
+                </div>
+                <div class="comp-body">
+                    <div class="side left">
+                        <h4>A Relação</h4>
+                        <p>Imagine o Big Data como um <strong>Oceano</strong> vasto e caótico, e o BI como uma <strong>Estação de Tratamento</strong>.</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="side right">
+                        <h4>Como Trabalham Juntos?</h4>
+                        <p>O <strong>Big Data</strong> fornece a tecnologia para capturar e processar petabytes de dados (estruturados ou não). O <strong>BI</strong> consome uma fatia refinada desses dados para gerar relatórios gerenciais. O Big Data alimenta o BI com volume; o BI dá sentido ao Big Data.</p>
+                    </div>
+                </div>`,
+            2: `
+                <div class="comp-header">
+                    <h3 class="comp-title">BI <span class="vs">e</span> Data Science</h3>
+                </div>
+                <div class="comp-body">
+                    <div class="side left">
+                        <h4>A Relação</h4>
+                        <p>São parceiros temporais. O BI é o <strong>Retrovisor</strong> (Diagnóstico), o Data Science é o <strong>Farol</strong> (Prognóstico).</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="side right">
+                        <h4>Como Trabalham Juntos?</h4>
+                        <p>O <strong>BI</strong> explica o comportamento atual ("O cliente X cancelou"). O <strong>Data Science</strong> usa algoritmos de IA nessas mesmas bases para prever o futuro ("O cliente Y tem 80% de chance de cancelar amanhã"). Um dá a base para o outro agir preventivamente.</p>
+                    </div>
+                </div>`,
+            3: `
+                <div class="comp-header">
+                    <h3 class="comp-title">Data Warehouse <span class="vs">e</span> Data Lake</h3>
+                </div>
+                <div class="comp-body">
+                    <div class="side left">
+                        <h4>A Relação</h4>
+                        <p>Ambos são repositórios, mas para estágios diferentes. O Lake é a <strong>Mina Bruta</strong>, o Warehouse é o <strong>Cofre Organizado</strong>.</p>
+                    </div>
+                    <div class="divider"></div>
+                    <div class="side right">
+                        <h4>Como Trabalham Juntos?</h4>
+                        <p>Normalmente, todos os dados da empresa caem primeiro no <strong>Data Lake</strong> (sem filtro). De lá, apenas os dados mais importantes são tratados e enviados para o <strong>Data Warehouse</strong>, que é otimizado para alimentar as ferramentas de BI com alta velocidade.</p>
+                    </div>
+                </div>`
+        };
+
+        // Click Handler for Ecosystem Tabs
+        document.querySelectorAll('.eco-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                document.querySelectorAll('.eco-tab').forEach(t => t.classList.remove('active'));
+                
+                // Add active to clicked tab
+                tab.classList.add('active');
+                
+                // Update Content
+                const ecoId = tab.getAttribute('data-eco');
+                const displayArea = document.getElementById('eco-display');
+                
+                if (displayArea) {
+                    displayArea.style.opacity = '0';
+                    displayArea.style.transform = 'translateY(10px)';
+                    
+                    setTimeout(() => {
+                        displayArea.innerHTML = ecoData[ecoId];
+                        displayArea.style.opacity = '1';
+                        displayArea.style.transform = 'translateY(0)';
+                    }, 300); 
+                }
+            });
+        });
+
+        // --- Scroll Reveal Animation ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const revealOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
+
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, revealOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => revealObserver.observe(el));
+        });
+
+        // --- Mouse Tracking Effect ---
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+            document.documentElement.style.setProperty('--mouse-x', `${x}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${y}px`);
+        });
+    </script>
+</body>
+</html>

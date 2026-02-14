@@ -1,0 +1,12 @@
+###
+AVISO
+###
+
+Eu sou leonardo, quem criou essa pagina para a apresentação da sua matéria
+criei esse .txt para dizer quais ferramentas eu usei para criar essa pagina
+
+Usei o Manus.ai para criar um prompt detalhado para instruir a IA
+
+A IA que usei para gerar o codigo foi o Gemini 3 Pro, que está disponível na funcionalidade de IA da minha IDE
+
+O IDE que usei para gerar o codigo foi o Antigravity
