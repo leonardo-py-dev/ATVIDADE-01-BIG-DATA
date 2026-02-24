@@ -62,11 +62,13 @@ h1 {
     font-size: clamp(2.5rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.05;
-    background: linear-gradient(135deg, #fff 30%, #86EFAC 70%, #00E676);
+    background: linear-gradient(135deg, #fff 0%, #86EFAC 25%, #00E676 50%, #86EFAC 75%, #fff 100%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
+    animation: textShimmer 4s ease-in-out infinite;
 }
 
 h2 {
@@ -137,10 +139,15 @@ p {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100%;
     width: 100%;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0, 230, 118, 0.2), transparent);
+    background: linear-gradient(90deg, transparent, rgba(0, 230, 118, 0.4), transparent);
+    transition: left 0.6s ease;
+}
+
+.glass-card:hover::before {
+    left: 100%;
 }
 
 .card-hover:hover {
@@ -669,6 +676,20 @@ body::before {
     margin-top: var(--spacing-sm);
 }
 
+.analysis-card.expanded {
+    border-color: rgba(0, 230, 118, 0.3);
+    border-left: 3px solid var(--accent-primary);
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.1);
+}
+
+.analysis-card.expanded .expand-hint {
+    display: none;
+}
+
+.analysis-card.expanded .card-number {
+    color: var(--accent-primary);
+}
+
 .analysis-card .expand-content p {
     padding-top: var(--spacing-xs);
     border-top: 1px solid rgba(0, 230, 118, 0.08);
@@ -940,6 +961,26 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes textShimmer {
+    0%, 100% { background-position: 0% center; }
+    50% { background-position: 200% center; }
+}
+
+@keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 4px rgba(0, 230, 118, 0.3); }
+    50% { box-shadow: 0 0 12px rgba(0, 230, 118, 0.6); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateY(-50%) translateX(-30px); }
+    to { opacity: 1; transform: translateY(-50%) translateX(0); }
+}
+
+@keyframes borderGlow {
+    0%, 100% { border-color: rgba(0, 230, 118, 0.08); }
+    50% { border-color: rgba(0, 230, 118, 0.2); }
+}
+
 .animate-enter {
     animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
     opacity: 0;
@@ -969,71 +1010,118 @@ footer {
 .stagger-children > *:nth-child(4) { transition-delay: 0.3s; }
 .stagger-children > *:nth-child(5) { transition-delay: 0.4s; }
 
+/* H2 reveal underline animation */
+h2.reveal.active {
+    position: relative;
+}
+h2.reveal.active::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-primary), transparent);
+    animation: expandLine 0.8s 0.3s ease forwards;
+}
+@keyframes expandLine {
+    to { width: 60px; }
+}
+
+/* Tool dot pulse */
+.tool-card .tool-dot {
+    animation: pulseGlow 2s infinite ease-in-out;
+    border-radius: 50%;
+}
+
 /* ===================== SIDEBAR ===================== */
 .sidebar-utils {
     position: fixed;
-    left: 40px;
+    left: 20px;
     top: 50%;
     transform: translateY(-50%);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 6px;
     z-index: 100;
-    padding: 16px;
-    background: rgba(2, 4, 2, 0.7);
-    border-radius: 20px;
-    border: 1px solid rgba(0, 230, 118, 0.05);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    padding: 12px 8px;
+    background: rgba(2, 4, 2, 0.85);
+    border-radius: 16px;
+    border: 1px solid rgba(0, 230, 118, 0.06);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5), inset 0 1px 0 rgba(0,230,118,0.05);
+    animation: slideInLeft 0.6s 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    animation-fill-mode: both;
 }
 
 .sidebar-btn {
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
-    background: rgba(0, 230, 118, 0.04);
-    border: 1px solid rgba(0, 230, 118, 0.08);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: transparent;
+    border: 1px solid transparent;
     color: var(--text-muted);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: var(--transition-smooth);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
-.sidebar-btn:hover, .sidebar-btn.active {
+.sidebar-btn:hover {
+    background: rgba(0, 230, 118, 0.08);
+    color: var(--accent-primary);
+    border-color: rgba(0, 230, 118, 0.12);
+    transform: scale(1.1);
+}
+
+.sidebar-btn.active {
+    background: rgba(0, 230, 118, 0.12);
+    color: var(--accent-primary);
+    border-color: rgba(0, 230, 118, 0.2);
+    box-shadow: 0 0 16px rgba(0, 230, 118, 0.15);
+}
+
+.sidebar-btn.active::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 20px;
+    border-radius: 0 3px 3px 0;
     background: var(--accent-primary);
-    color: #000;
-    box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
-    transform: scale(1.05) translateX(3px);
+    box-shadow: 0 0 8px rgba(0, 230, 118, 0.5);
 }
 
 .sidebar-btn::after {
     content: attr(data-tooltip);
     position: absolute;
-    left: 100%;
+    left: calc(100% + 16px);
     top: 50%;
-    transform: translateY(-50%) translateX(12px);
-    background: var(--bg-primary);
+    transform: translateY(-50%) translateX(4px);
+    background: rgba(5, 15, 10, 0.95);
     color: var(--text-primary);
     padding: 6px 14px;
     border-radius: 8px;
-    font-size: 0.8rem;
+    font-size: 0.78rem;
     font-family: 'Inter', sans-serif;
     white-space: nowrap;
     opacity: 0;
     pointer-events: none;
-    transition: var(--transition-smooth);
-    margin-left: 10px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     border: 1px solid rgba(0, 230, 118, 0.15);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    backdrop-filter: blur(12px);
 }
 
 .sidebar-btn:hover::after {
     opacity: 1;
+    transform: translateY(-50%) translateX(0);
 }
 
 /* ===================== MODAL ===================== */

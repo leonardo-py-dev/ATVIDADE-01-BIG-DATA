@@ -6,6 +6,10 @@
     <title>Business Intelligence | Estratégia Futurista</title>
     <meta name="description" content="Tudo sobre Business Intelligence: ciclo de vida dos dados, ecossistema, ferramentas de mercado e cases práticos.">
     <link rel="stylesheet" href="../CSS/style.css">
+    <style>
+        .tool-card.expanded { border-color: var(--accent) !important; background: rgba(0,230,118,0.08) !important; }
+        .tool-card.expanded .tool-desc { max-height: 100px !important; margin-top: 0.6rem !important; }
+    </style>
 </head>
 <body>
 
@@ -19,15 +23,14 @@
     <aside class="sidebar-utils">
         <a href="#hero" class="sidebar-btn active" data-tooltip="Início">⌂</a>
         <a href="#concept" class="sidebar-btn" data-tooltip="Conceito">★</a>
-        <a href="#impact" class="sidebar-btn" data-tooltip="Impacto">⚡</a>
-        <a href="#ecosystem" class="sidebar-btn" data-tooltip="Ecossistema">∞</a>
-        <a href="#six-vs" class="sidebar-btn" data-tooltip="6 Vs">◆</a>
+        <a href="#advantages" class="sidebar-btn" data-tooltip="Vantagens">⚡</a>
+        <a href="#bi-practice" class="sidebar-btn" data-tooltip="Na Prática">◆</a>
         <a href="#analysis-types" class="sidebar-btn" data-tooltip="Análises">◈</a>
         <a href="#benefits" class="sidebar-btn" data-tooltip="Benefícios">✓</a>
         <a href="#tools" class="sidebar-btn" data-tooltip="Ferramentas">⚙</a>
-        <a href="#case-study" class="sidebar-btn" data-tooltip="Case">📊</a>
+        <a href="#references" class="sidebar-btn" data-tooltip="Referências">📚</a>
 
-        <div style="height: 1px; background: rgba(0,230,118,0.08); margin: 2px 0;"></div>
+        <div style="height: 1px; background: linear-gradient(90deg, transparent, rgba(0,230,118,0.12), transparent); margin: 4px 6px;"></div>
 
         <div class="sidebar-btn" id="summary-btn" data-tooltip="Resumo Completo">📝</div>
         <div class="sidebar-btn" id="share-btn" data-tooltip="Copiar Link">🔗</div>
@@ -42,26 +45,19 @@
 
             <div class="summary-body">
                 <h3>1. O Que é BI?</h3>
-                <p>BI é o processo de transformar dados brutos em informações úteis para tomar decisões melhores. Em vez de "achar", a empresa passa a decidir com base em fatos.</p>
+                <p>BI descreve processos, técnicas e ferramentas para coleta, processamento e análise de dados, gerando insights que auxiliam na tomada de decisões empresariais.</p>
 
-                <h3>2. O Ciclo de Vida dos Dados</h3>
+                <h3>2. Como o BI Funciona</h3>
                 <ul>
-                    <li><strong>Coleta:</strong> Buscar dados de todas as fontes possíveis (sistemas, planilhas, sensores).</li>
-                    <li><strong>Organização:</strong> Limpar, padronizar e armazenar os dados de forma confiável.</li>
-                    <li><strong>Análise:</strong> Usar indicadores (KPIs) para entender o que aconteceu e por quê.</li>
-                    <li><strong>Visualização:</strong> Criar dashboards visuais que qualquer pessoa entenda em segundos.</li>
-                    <li><strong>Decisão:</strong> Agir com base em evidências, não em achismo.</li>
+                    <li><strong>Coleta:</strong> Seleção diversa de dados em fontes internas e externas.</li>
+                    <li><strong>Organização:</strong> Agregar diferentes tipos de dados em um local centralizado.</li>
+                    <li><strong>Processamento:</strong> Mineração de dados para obter informações úteis.</li>
+                    <li><strong>Visualização:</strong> Apresentação em dashboards para entendimento prático.</li>
+                    <li><strong>Decisão:</strong> Insights usados para tomada de decisões estratégicas.</li>
                 </ul>
 
-                <h3>3. Impacto Estratégico</h3>
-                <p>O BI ajuda a reduzir riscos (Finanças), antecipar problemas (Saúde) e vender melhor (Varejo).</p>
-
-                <h3>4. O Ecossistema de Dados</h3>
-                <ul>
-                    <li><strong>BI e Big Data:</strong> Como disse Clive Humby: dados são o novo petróleo. O BI é a refinaria que transforma esse recurso bruto em valor.</li>
-                    <li><strong>BI e Data Science:</strong> O BI é determinístico (fatos). O Data Science é probabilístico (previsões). Sem BI, não há base confiável para previsões.</li>
-                    <li><strong>Warehouse vs Lake:</strong> O Warehouse é a biblioteca organizada do BI. O Lake sem curadoria vira um "Data Swamp" (Gartner).</li>
-                </ul>
+                <h3>3. Vantagens do BI</h3>
+                <p>O BI se destaca por sua simplicidade e acessibilidade, sendo essencial para a tomada de decisões estratégicas em todas as empresas.</p>
             </div>
         </div>
     </div>
@@ -80,7 +76,7 @@
             <h2>Definição Conceitual</h2>
             <div class="glass-card">
                 <p class="definition-text">
-                    Pense no BI como um <span class="highlight">check-up da empresa</span>. Assim como um médico usa exames para diagnosticar e tratar, o BI usa <span class="highlight-success">dados</span> para mostrar o que vai bem, o que vai mal, e o que fazer a respeito.
+                    O Business Intelligence descreve <span class="highlight">processos, técnicas e ferramentas</span> para a coleta, processamento e análise de dados, gerando <span class="highlight-success">insights</span> que auxiliam na tomada de decisões estratégicas de uma empresa.
                 </p>
 
                 <!-- Cycle -->
@@ -119,169 +115,110 @@
 
         <hr class="section-divider">
 
-        <!-- ==================== IMPACTO ==================== -->
-        <section id="impact" class="section-block">
-            <h2 class="reveal">Impacto Estratégico</h2>
-            <div class="grid-3 stagger-children">
+        <!-- ==================== VANTAGENS DO BI ==================== -->
+        <section id="advantages" class="section-block">
+            <h2 class="reveal">Vantagem do BI sobre as outras áreas</h2>
+            <div class="glass-card reveal">
+                <p class="definition-text">
+                    Em relação às outras áreas de dados, o BI se destaca por sua <span class="highlight">simplicidade</span>. Isso o torna <span class="highlight-success">acessível à maior parte dos integrantes de uma empresa</span>. Além disso, ele é praticamente a parte essencial para a tomada de decisões estratégicas em todas as empresas hoje em dia.
+                </p>
+            </div>
+
+            <div class="grid-2-col stagger-children" style="margin-top: var(--spacing-md); display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-md);">
                 <div class="glass-card card-hover reveal">
-                    <h3 class="card-title">Finanças</h3>
-                    <p>Em vez de "chutar" onde investir, o BI mostra com dados exatos onde colocar o dinheiro para ter mais retorno e menos risco.</p>
+                    <h3 class="card-title">📊 BI vs Big Data</h3>
+                    <p>O Big Data lida com volumes enormes de dados, mas exige infraestrutura complexa e equipes técnicas especializadas. O <strong>BI é mais simples e prático</strong>: qualquer gestor consegue usar seus dashboards para tomar decisões sem precisar entender de programação.</p>
                 </div>
                 <div class="glass-card card-hover reveal">
-                    <h3 class="card-title">Saúde Pública</h3>
-                    <p>Hospitais usam BI para perceber que uma doença está crescendo antes que vire surto, e se preparar a tempo.</p>
+                    <h3 class="card-title">📊 BI vs Data Science</h3>
+                    <p>Data Science envolve modelagem estatística, algoritmos e IA — é poderoso, mas complexo. O <strong>BI é direto</strong>: mostra o que aconteceu com clareza, sem necessidade de modelos matemáticos, tornando-o acessível a toda a empresa.</p>
                 </div>
                 <div class="glass-card card-hover reveal">
-                    <h3 class="card-title">Varejo & Logística</h3>
-                    <p>Lojas usam BI para saber exatamente quanto comprar de cada produto. Exemplo: se vai esfriar, o sistema já sabe que casaco vende mais.</p>
+                    <h3 class="card-title">📊 BI vs Data Warehouse</h3>
+                    <p>O Data Warehouse é a infraestrutura que organiza os dados, mas não gera análise sozinho. O <strong>BI é quem dá sentido</strong> a esses dados, transformando o armazenamento organizado em insights visuais e acionáveis.</p>
+                </div>
+                <div class="glass-card card-hover reveal">
+                    <h3 class="card-title">📊 BI vs Data Lake</h3>
+                    <p>O Data Lake guarda tudo sem organizar — e sem cuidado vira um "Data Swamp" (pântano de dados). O <strong>BI organiza e filtra</strong>, entregando apenas o que importa de forma clara e visual para a tomada de decisão.</p>
                 </div>
             </div>
         </section>
 
         <hr class="section-divider">
 
-        <!-- ==================== ECOSSISTEMA ==================== -->
-        <section id="ecosystem" class="section-block">
-            <h2 class="reveal">Ecossistema de Dados</h2>
+        <!-- ==================== BI NA PRÁTICA ==================== -->
+        <section id="bi-practice" class="section-block">
+            <h2 class="reveal">O BI na Prática</h2>
+            <p class="reveal" style="color: var(--text-muted); margin-bottom: var(--spacing-md); font-size: 0.95rem;">Como o Business Intelligence funciona no dia a dia das empresas</p>
 
-            <div class="glass-card">
-                <div class="eco-tabs">
-                    <button class="eco-tab active" data-eco="1">BI <span class="vs-small">vs</span> Big Data</button>
-                    <button class="eco-tab" data-eco="2">BI <span class="vs-small">vs</span> Data Science</button>
-                    <button class="eco-tab" data-eco="3">Warehouse <span class="vs-small">vs</span> Lake</button>
-                </div>
-
-                <div id="eco-display" class="eco-content visible">
-                    <div class="comp-header">
-                        <h3 class="comp-title">BI <span class="vs">e</span> Big Data</h3>
+            <div class="glass-card reveal" style="margin-bottom: var(--spacing-md);">
+                <h3 class="card-title" style="margin-bottom: 1rem;">⚙️ O Processo do BI em 5 Etapas</h3>
+                <p style="margin-bottom: 1.2rem;">Podemos dividir o processo do BI em 5 partes principais:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem;">
+                    <div style="text-align: center; padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.1);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📥</div>
+                        <strong style="color: var(--accent);">1. Coleta</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Seleção de dados em fontes internas (bancos de dados) e externas (pesquisas, entrevistas).</p>
                     </div>
-                    <div class="comp-body">
-                        <div class="side left">
-                            <h4>BI (O Valor Refinado)</h4>
-                            <p>Como disse <strong>Clive Humby</strong>: "Dados são o novo petróleo". O BI é a <strong>Refinaria</strong>. Sem o BI, o Big Data é apenas um recurso bruto e inutilizável.</p>
-                        </div>
-                        <div class="divider"></div>
-                        <div class="side right">
-                            <h4>Big Data (O Recurso Bruto)</h4>
-                            <p>O Big Data foca na captura massiva (o "Oceano"). Porém, volume sem análise é apenas ruído. O BI é superior para a <strong>Tomada de Decisão</strong> pois filtra esse caos.</p>
-                        </div>
+                    <div style="text-align: center; padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.1);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🗂️</div>
+                        <strong style="color: var(--accent);">2. Organização</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Dados agregados em um local centralizado, do Data Mart às plataformas de nuvem.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.1);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">⛏️</div>
+                        <strong style="color: var(--accent);">3. Processamento</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Mineração de dados: inter-relacionar e analisar para gerar informações úteis.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.1);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">📊</div>
+                        <strong style="color: var(--accent);">4. Visualização</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Dados apresentados em dashboards para entendimento prático e simples.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.1);">
+                        <div style="font-size: 1.8rem; margin-bottom: 0.5rem;">🎯</div>
+                        <strong style="color: var(--accent);">5. Decisão</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem;">Insights usados para tomada de decisões estratégicas da empresa.</p>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <hr class="section-divider">
-
-        <!-- ==================== 6 Vs DO BIG DATA ==================== -->
-        <section id="six-vs" class="section-block">
-            <h2 class="reveal">Os 6 Vs do Big Data e sua conexão com BI</h2>
-            <p class="reveal" style="color: var(--text-muted); margin-bottom: var(--spacing-md); font-size: 0.95rem;">🖥️ Clique em cada card para saber mais</p>
-            <div class="grid-3 stagger-children">
-
-                <div class="v-flip-wrapper reveal" onclick="this.classList.toggle('flipped')">
-                    <div class="v-flip-inner">
-                        <div class="v-flip-front">
-                            <div class="v-icon">
-                                <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                            </div>
-                            <h3>Volume</h3>
-                            <p>Quantidade massiva de dados gerados por segundo.</p>
-                            <span class="flip-hint">▸ clique para ver no BI</span>
-                        </div>
-                        <div class="v-flip-back">
-                            <div class="v-back-label">📊 No BI</div>
-                            <p>Alimenta o <strong>Data Warehouse</strong>, que organiza tudo para consultas rápidas nos dashboards.</p>
-                        </div>
+            <div class="glass-card reveal" style="margin-bottom: var(--spacing-md);">
+                <h3 class="card-title" style="margin-bottom: 1rem;">🔗 Explore na Prática</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <a href="https://powerbi.microsoft.com/pt-br/guidedtour/power-platform/power-bi/3/5" target="_blank" rel="noopener" style="display: block; padding: 1.2rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.15); text-decoration: none; color: inherit; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--accent)';this.style.background='rgba(0,230,118,0.1)'" onmouseout="this.style.borderColor='rgba(0,230,118,0.15)';this.style.background='rgba(0,230,118,0.05)'">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">🖥️</div>
+                        <strong style="color: var(--accent);">Tour pelo Power BI</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-muted);">Veja como o Power BI funciona na prática com o tour guiado oficial da Microsoft.</p>
+                    </a>
+                    <a href="https://docs.google.com/spreadsheets/d/196a0djlsS9rkIyYKj4IztD77ayXoZOmONtyjsYtoshw/edit?usp=sharing" target="_blank" rel="noopener" style="display: block; padding: 1.2rem; border-radius: 12px; background: rgba(0,230,118,0.05); border: 1px solid rgba(0,230,118,0.15); text-decoration: none; color: inherit; transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--accent)';this.style.background='rgba(0,230,118,0.1)'" onmouseout="this.style.borderColor='rgba(0,230,118,0.15)';this.style.background='rgba(0,230,118,0.05)'">
+                        <div style="font-size: 1.5rem; margin-bottom: 0.5rem;">📋</div>
+                        <strong style="color: var(--accent);">Planilha de Exemplos de BI</strong>
+                        <p style="font-size: 0.85rem; margin-top: 0.5rem; color: var(--text-muted);">Veja exemplos reais de empresas que utilizam Business Intelligence no dia a dia.</p>
+                    </a>
+                </div>
+            </div>
+            <div class="glass-card reveal">
+                <h3 class="card-title" style="margin-bottom: 1rem;">🎓 Onde Aprender e Praticar BI</h3>
+                <p style="margin-bottom: 1.2rem;">Plataformas recomendadas para começar a aprender e mexer com BI:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.03); border: 1px solid rgba(0,230,118,0.08);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Microsoft Learn</h4>
+                        <p style="font-size: 0.9rem;">O melhor lugar para aprender <strong>Power BI</strong> (a ferramenta mais usada no mundo). Trilhas gratuitas do iniciante ao avançado, incluindo uso do Copilot.</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.03); border: 1px solid rgba(0,230,118,0.08);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Data Science Academy</h4>
+                        <p style="font-size: 0.9rem;">Curso gratuito "Microsoft Power BI Para Business Intelligence e Data Science" — muito reconhecido no Brasil.</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.03); border: 1px solid rgba(0,230,118,0.08);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Google Skillshop</h4>
+                        <p style="font-size: 0.9rem;">Treinamentos gratuitos para aprender <strong>Looker Studio</strong>, a ferramenta de BI do Google, ideal para iniciantes.</p>
+                    </div>
+                    <div style="padding: 1rem; border-radius: 12px; background: rgba(0,230,118,0.03); border: 1px solid rgba(0,230,118,0.08);">
+                        <h4 style="color: var(--accent); margin-bottom: 0.5rem;">Santander Open Academy</h4>
+                        <p style="font-size: 0.9rem;">Bolsas para cursos de análise de dados e BI em parceria com a Alura e universidades renomadas.</p>
                     </div>
                 </div>
-
-                <div class="v-flip-wrapper reveal" onclick="this.classList.toggle('flipped')">
-                    <div class="v-flip-inner">
-                        <div class="v-flip-front">
-                            <div class="v-icon">
-                                <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                            </div>
-                            <h3>Velocidade</h3>
-                            <p>Rapidez na geração e no processamento dos dados.</p>
-                            <span class="flip-hint">▸ clique para ver no BI</span>
-                        </div>
-                        <div class="v-flip-back">
-                            <div class="v-back-label">📊 No BI</div>
-                            <p>Permite <strong>dashboards em tempo real</strong> — o gestor age no mesmo dia, não semanas depois.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="v-flip-wrapper reveal" onclick="this.classList.toggle('flipped')">
-                    <div class="v-flip-inner">
-                        <div class="v-flip-front">
-                            <div class="v-icon">
-                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                            </div>
-                            <h3>Variedade</h3>
-                            <p>Fontes diversas: planilhas, APIs, redes sociais, sensores.</p>
-                            <span class="flip-hint">▸ clique para ver no BI</span>
-                        </div>
-                        <div class="v-flip-back">
-                            <div class="v-back-label">📊 No BI</div>
-                            <p>O <strong>ETL</strong> padroniza tudo num formato único para os relatórios.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="v-flip-wrapper reveal" onclick="this.classList.toggle('flipped')">
-                    <div class="v-flip-inner">
-                        <div class="v-flip-front">
-                            <div class="v-icon">
-                                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                            </div>
-                            <h3>Veracidade</h3>
-                            <p>Confiabilidade e precisão dos dados coletados.</p>
-                            <span class="flip-hint">▸ clique para ver no BI</span>
-                        </div>
-                        <div class="v-flip-back">
-                            <div class="v-back-label">📊 No BI</div>
-                            <p>Dado errado = <strong>dashboard que mente</strong>. Por isso a limpeza dos dados é essencial.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="v-flip-wrapper reveal" onclick="this.classList.toggle('flipped')">
-                    <div class="v-flip-inner">
-                        <div class="v-flip-front">
-                            <div class="v-icon">
-                                <svg viewBox="0 0 24 24"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-                            </div>
-                            <h3>Valor</h3>
-                            <p>O retorno real que os dados geram para o negócio.</p>
-                            <span class="flip-hint">▸ clique para ver no BI</span>
-                        </div>
-                        <div class="v-flip-back">
-                            <div class="v-back-label">📊 No BI</div>
-                            <p><strong>Objetivo final</strong>: transformar os outros 5 Vs em lucro e vantagem competitiva.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="v-flip-wrapper v-controversial reveal" onclick="this.classList.toggle('flipped')">
-                    <div class="v-flip-inner">
-                        <div class="v-flip-front">
-                            <div class="v-icon">
-                                <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                            </div>
-                            <h3>Visualização</h3>
-                            <p>Representar dados de forma clara: gráficos, dashboards e relatórios.</p>
-                            <span class="v-debate-badge">⚠ 6º V — debatido entre autores</span>
-                            <span class="flip-hint">▸ clique para saber mais</span>
-                        </div>
-                        <div class="v-flip-back">
-                            <div class="v-back-label">📊 No BI</div>
-                            <p>Dashboards e gráficos são a <strong>interface final do BI</strong> — onde o gestor de fato lê os dados.</p>
-                            <p class="v-note"><strong>Nota:</strong> Alguns autores substituem Visualização por <em>Variabilidade</em> (mudanças nos dados ao longo do tempo).</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
@@ -373,87 +310,78 @@
         <!-- ==================== FERRAMENTAS ==================== -->
         <section id="tools" class="section-block tools-section">
             <h2 class="reveal">Ferramentas de Mercado</h2>
-            <div class="glass-card reveal">
+            <p class="reveal" style="color: var(--text-muted); margin-bottom: var(--spacing-md); font-size: 0.95rem;">🖥️ Clique em cada ferramenta para saber mais</p>
+
+            <div class="glass-card reveal" style="margin-bottom: var(--spacing-md);">
                 <div class="category-label">📊 Visualização & Análise</div>
-                <div class="tools-grid">
-                    <span class="tool-badge"><span class="tool-dot"></span>Power BI</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Tableau</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Looker Studio</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Qlik Sense</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Apache Superset</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Metabase</span>
+                <div class="tools-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem;">
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Power BI</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Ferramenta da Microsoft, a mais usada no mundo. Integração total com Excel, Azure e Teams.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Tableau</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Líder em visualização de dados. Dashboards interativos e drag-and-drop. Pertence à Salesforce.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Looker Studio</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Ferramenta gratuita do Google. Ideal para iniciantes e integração com Google Ads e Analytics.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Qlik Sense</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Motor associativo que permite explorar dados de forma livre, sem consultas pré-definidas.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Metabase</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Open source e simples de usar. Perfeito para equipes menores que querem BI sem complexidade.</p>
+                    </div>
                 </div>
+            </div>
 
+            <div class="glass-card reveal" style="margin-bottom: var(--spacing-md);">
                 <div class="category-label">🗄️ Armazenamento & Processamento</div>
-                <div class="tools-grid">
-                    <span class="tool-badge blue"><span class="tool-dot"></span>Google BigQuery</span>
-                    <span class="tool-badge blue"><span class="tool-dot"></span>Amazon Redshift</span>
-                    <span class="tool-badge blue"><span class="tool-dot"></span>Snowflake</span>
-                    <span class="tool-badge blue"><span class="tool-dot"></span>Azure Synapse</span>
-                    <span class="tool-badge blue"><span class="tool-dot"></span>Apache Spark</span>
+                <div class="tools-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem;">
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block;"></span><strong>BigQuery</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Data warehouse do Google Cloud. Processa terabytes em segundos usando SQL.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block;"></span><strong>Snowflake</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Plataforma multi-cloud que separa armazenamento e computação para escalar sob demanda.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block;"></span><strong>Azure Synapse</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Solução da Microsoft que une data warehouse + analytics + integração em uma só plataforma.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(59,130,246,0.04); border: 1px solid rgba(59,130,246,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span style="width:8px;height:8px;border-radius:50%;background:#3b82f6;display:inline-block;"></span><strong>Amazon Redshift</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Data warehouse da AWS. Otimizado para consultas analíticas em grandes volumes.</p>
+                    </div>
                 </div>
+            </div>
 
+            <div class="glass-card reveal">
                 <div class="category-label">🔄 ETL & Integração</div>
-                <div class="tools-grid">
-                    <span class="tool-badge"><span class="tool-dot"></span>Apache Airflow</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>dbt</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Talend</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>Fivetran</span>
-                    <span class="tool-badge"><span class="tool-dot"></span>SSIS (Microsoft)</span>
+                <div class="tools-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 0.75rem;">
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Apache Airflow</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Orquestra pipelines de dados com agendamento e monitoramento visual.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>dbt</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Transforma dados dentro do warehouse usando SQL. Padrão moderno de ELT.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Talend</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Plataforma completa de integração de dados com interface visual drag-and-drop.</p>
+                    </div>
+                    <div class="tool-card" onclick="this.classList.toggle('expanded')" style="cursor: pointer; padding: 1rem; border-radius: 10px; background: rgba(0,230,118,0.04); border: 1px solid rgba(0,230,118,0.1); transition: all 0.3s ease;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem;"><span class="tool-dot" style="width:8px;height:8px;border-radius:50%;background:var(--accent);display:inline-block;"></span><strong>Fivetran</strong></div>
+                        <p class="tool-desc" style="max-height:0;overflow:hidden;transition:max-height 0.3s ease;font-size:0.85rem;margin-top:0;">Automatiza a ingestão de dados de +300 fontes sem precisar programar.</p>
+                    </div>
                 </div>
             </div>
         </section>
-
-        <hr class="section-divider">
-
-        <!-- ==================== CASE PRÁTICO ==================== -->
-        <section id="case-study" class="section-block">
-            <h2 class="reveal">Case Prático: Rede de Varejo</h2>
-            <p class="reveal" style="max-width: 700px; margin-bottom: var(--spacing-md);">Exemplo baseado em dados do relatório <strong>"Analytics Pays Back $13.01 for Every Dollar Spent"</strong> (Nucleus Research, 2014). Uma rede de varejo com 50 lojas implementou BI:</p>
-
-            <div class="case-grid reveal">
-                <div class="case-column before">
-                    <h3>❌ Antes do BI</h3>
-                    <div class="stat">
-                        <span class="stat-number" data-target="35">35%</span>
-                        <span class="stat-label">de desperdício em estoque</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">72h</span>
-                        <span class="stat-label">para gerar relatórios manuais</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">12%</span>
-                        <span class="stat-label">de margem de lucro</span>
-                    </div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem;">Decisões no achismo. Planilhas velhas. Reação lenta.</p>
-                </div>
-
-                <div class="case-arrow">
-                    <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-                    <span>BI</span>
-                </div>
-
-                <div class="case-column after">
-                    <h3>✅ Depois do BI</h3>
-                    <div class="stat">
-                        <span class="stat-number" data-target="8">8%</span>
-                        <span class="stat-label">de desperdício em estoque</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">5min</span>
-                        <span class="stat-label">para dashboards em tempo real</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">23%</span>
-                        <span class="stat-label">de margem de lucro</span>
-                    </div>
-                    <p style="margin-top: 1rem; font-size: 0.9rem;">Decisões com dados. Dashboards ao vivo. A empresa sai na frente.</p>
-                </div>
-            </div>
-        </section>
-
-        <hr class="section-divider">
 
         <!-- ==================== REFERÊNCIAS ==================== -->
         <section id="references" class="section-block">
@@ -540,11 +468,11 @@
 
         // === Cycle Data ===
         const cycleData = {
-            1: "<strong>Etapa 1: Coleta</strong><br>Tudo começa buscando dados em todas as fontes: sistemas da empresa, planilhas, redes sociais, sensores. O objetivo é juntar a maior quantidade possível de informação útil.",
-            2: "<strong>Etapa 2: Organização</strong><br>Dados brutos são bagunçados. Aqui aplicamos o ETL (Extrair, Transformar e Carregar): corrigimos erros, padronizamos formatos e removemos duplicatas. Resultado: uma única versão confiável dos dados.",
-            3: "<strong>Etapa 3: Análise</strong><br>Com os dados limpos, cruzamos informações para encontrar padrões. Por exemplo: 'as vendas caem sempre que chove?' ou 'qual região dá mais lucro?'. O foco é entender o que aconteceu e por quê.",
-            4: "<strong>Etapa 4: Visualização</strong><br>Números complexos viram gráficos simples. O gestor olha para um dashboard e entende a saúde da empresa em 5 segundos — verde é bom, vermelho é problema.",
-            5: "<strong>Etapa 5: Decisão</strong><br>Com provas na mão, o gestor para de adivinhar e passa a decidir com segurança. O BI transforma a empresa de reativa (apagar incêndios) para proativa (prevenir problemas)."
+            1: "<strong>Etapa 1: Coleta de Dados</strong><br>É feita uma seleção diversa de dados, tanto em fontes internas — como bancos de dados da empresa — quanto em fontes externas — como pesquisas e entrevistas. O objetivo é reunir a maior quantidade possível de informação relevante.",
+            2: "<strong>Etapa 2: Organização</strong><br>Os dados coletados são agregados em um local centralizado, podendo variar desde técnicas como o Data Mart até plataformas de nuvem do BI. Aqui se aplica o ETL (Extrair, Transformar e Carregar) para padronizar tudo.",
+            3: "<strong>Etapa 3: Processamento (Mineração)</strong><br>Comumente chamada de mineração de dados, nesta etapa os dados são inter-relacionados e analisados para obter informações úteis e gerar os insights necessários.",
+            4: "<strong>Etapa 4: Visualização</strong><br>Os dados processados são apresentados de forma visual, geralmente em dashboards, para que todos os usuários possam entender os insights de maneira prática e simples.",
+            5: "<strong>Etapa 5: Decisão</strong><br>Finalmente, todos os insights gerados são usados para a tomada de decisões estratégicas da empresa. O BI transforma a empresa de reativa para proativa."
         };
 
         document.querySelectorAll('.step').forEach(step => {
@@ -564,69 +492,9 @@
             });
         });
 
-        // === Ecosystem Data ===
-        const ecoData = {
-            1: `<div class="comp-header">
-                    <h3 class="comp-title">BI <span class="vs">e</span> Big Data</h3>
-                </div>
-                <div class="comp-body">
-                    <div class="side left">
-                        <h4>BI (Quem dá sentido)</h4>
-                        <p>Dados sozinhos não servem pra nada — como disse <strong>Clive Humby</strong>: "dados são o novo petróleo". O BI é a <strong>refinaria</strong> que transforma esse petróleo bruto em combustível útil para decisões.</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="side right">
-                        <h4>Big Data (O volume bruto)</h4>
-                        <p>Big Data é sobre guardar e processar quantidades enormes de dados. Mas sem alguém para analisar, é só barulho. O BI filtra esse barulho e entrega respostas claras.</p>
-                    </div>
-                </div>`,
-            2: `<div class="comp-header">
-                    <h3 class="comp-title">BI <span class="vs">e</span> Data Science</h3>
-                </div>
-                <div class="comp-body">
-                    <div class="side left">
-                        <h4>BI (Os fatos)</h4>
-                        <p>O BI mostra exatamente o que aconteceu: "vendemos X unidades ontem". É a verdade dos números, sem suposição.</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="side right">
-                        <h4>Data Science (As previsões)</h4>
-                        <p>O Data Science usa IA para tentar prever o futuro ("provavelmente venderemos Y amanhã"). Mas sem os dados confiáveis que o BI organiza, essas previsões podem errar feio.</p>
-                    </div>
-                </div>`,
-            3: `<div class="comp-header">
-                    <h3 class="comp-title">Warehouse <span class="vs">e</span> Lake</h3>
-                </div>
-                <div class="comp-body">
-                    <div class="side left">
-                        <h4>Warehouse (A biblioteca)</h4>
-                        <p>É onde o BI busca os dados. Tudo organizado, limpo e pronto para responder perguntas em segundos. Como uma biblioteca com índice.</p>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="side right">
-                        <h4>Data Lake (O depósito)</h4>
-                        <p>Guarda tudo sem organizar. Segundo a <strong>Gartner</strong>, sem cuidado ele vira um "pântano de dados" (Data Swamp) — muita coisa guardada, mas ninguém acha nada.</p>
-                    </div>
-                </div>`
-        };
+        // === Ecosystem Data === (removed — section replaced by Vantagens do BI)
 
-        document.querySelectorAll('.eco-tab').forEach(tab => {
-            tab.addEventListener('click', () => {
-                document.querySelectorAll('.eco-tab').forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-                const ecoId = tab.getAttribute('data-eco');
-                const displayArea = document.getElementById('eco-display');
-                if (displayArea) {
-                    displayArea.style.opacity = '0';
-                    displayArea.style.transform = 'translateY(10px)';
-                    setTimeout(() => {
-                        displayArea.innerHTML = ecoData[ecoId];
-                        displayArea.style.opacity = '1';
-                        displayArea.style.transform = 'translateY(0)';
-                    }, 300);
-                }
-            });
-        });
+        // eco-tab listeners removed — section replaced by Vantagens do BI
 
         // === Scroll Reveal ===
         document.addEventListener('DOMContentLoaded', () => {
